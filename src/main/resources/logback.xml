@@ -1,0 +1,32 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg
+            </Pattern>
+        </layout>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <File>/tmp/logs/playground/playground.log</File>
+        <Append>true</Append>
+
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{HH:mm:ss.SSS} %-5level %logger{35} - %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <logger name="com.gedim.playground" level="DEBUG"/>
+
+    <logger name="org.hibernate" level="INFO"/>
+
+    <logger name="com.ocpsoft.pretty" level="INFO"/>
+
+    <logger name="net.sf.ehcache" level="INFO"/>
+
+    <logger name="org.elasticsearch" level="INFO"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

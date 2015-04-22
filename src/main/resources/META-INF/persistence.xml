@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+  <persistence-unit name="playground" transaction-type="JTA">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <jta-data-source>java:app/jdbc/playground</jta-data-source>
+    <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.format_sql" value="true" />
+      <property name="hibernate.query.factory_class" value="org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory" />
+      <property name="hibernate.hbm2ddl.auto" value="create"/>
+      <property name="transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory" />
+      <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform"/>
+      
+      <!-- Cache properties -->
+      <!--
+           <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory" />
+           <property name="hibernate.cache.use_query_cache" value="true" />
+           <property name="hibernate.cache.use_second_level_cache" value="true" />
+           <property name="hibernate.generate_statistics" value="true" />
+      -->
+    </properties>
+  </persistence-unit>
+
+</persistence>
