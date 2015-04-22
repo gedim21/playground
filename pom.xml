@@ -117,7 +117,7 @@
         <configuration>
           <goalPrefix>embedded-glassfish</goalPrefix>
           <autoDelete>true</autoDelete>
-          <port>8080</port>
+          <port>8888</port>
         </configuration>
         <executions>
           <execution>
