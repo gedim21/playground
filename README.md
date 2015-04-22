@@ -3,7 +3,7 @@
 Playground is a sample JavaEE application that is intended to be used for rapid prototyping and testing out new ideas or new JavaEE features.
 It uses:
 * JSF 2.2
-* EJB 3.1
+* EJB 3.2
 * JPA 2.1
 * Hibernate 4.3.9.Final
 * Ehcache 2.4.3
