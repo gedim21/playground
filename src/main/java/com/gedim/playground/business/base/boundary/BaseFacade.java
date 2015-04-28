@@ -1,4 +1,4 @@
-package com.gedim.playground.business.base.bounday;
+package com.gedim.playground.business.base.boundary;
 
 import com.gedim.playground.utility.TracingInterceptor;
 

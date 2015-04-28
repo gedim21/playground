@@ -7,7 +7,6 @@ import javax.servlet.http.HttpSessionListener;
 @WebListener
 public class TimeoutListener implements HttpSessionListener {
 
-
     @Override
     public void sessionCreated(HttpSessionEvent arg0) {
 

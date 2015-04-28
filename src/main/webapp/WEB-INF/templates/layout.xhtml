@@ -1,36 +1,36 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 
-  <h:head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>playground</title>
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>playground</title>
 
-    <h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css" />
-    <h:outputStylesheet library="bootstrap/css" name="bootstrap-theme.min.css" />
-    <h:outputStylesheet library="playground/css" name="playground.css" />
+        <h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css" />
+        <h:outputStylesheet library="bootstrap/css" name="bootstrap-theme.min.css" />
+        <h:outputStylesheet library="playground/css" name="playground.css" />
 
-    <h:outputScript library="jquery/js" name="jquery-2.1.3.min.js"/>
-    <h:outputScript library="bootstrap/js" name="bootstrap.min.js"/>
-    <h:outputScript library="javax.faces" name="jsf.js"/>
+        <h:outputScript library="jquery/js" name="jquery-2.1.3.min.js"/>
+        <h:outputScript library="bootstrap/js" name="bootstrap.min.js"/>
+        <h:outputScript library="javax.faces" name="jsf.js"/>
 
-    <ui:insert name="scripts"/>
-  </h:head>
+        <ui:insert name="scripts"/>
+    </h:head>
 
-  <h:body>
+    <h:body>
 
-    <ui:param name="siteRoot"
-              value="#{facesContext.externalContext.requestContextPath}"/>
+        <ui:param name="siteRoot"
+                  value="#{facesContext.externalContext.requestContextPath}"/>
 
-    <ui:include src="/WEB-INF/templates/header.xhtml"/>
+        <ui:include src="/WEB-INF/templates/header.xhtml"/>
 
-    <ui:insert name="content"/>
+        <ui:insert name="content"/>
 
-    <ui:include src="/WEB-INF/templates/footer.xhtml"/>
+        <ui:include src="/WEB-INF/templates/footer.xhtml"/>
 
-    <ui:include src="/WEB-INF/templates/debug.xhtml"/>
+        <ui:include src="/WEB-INF/templates/debug.xhtml"/>
 
-  </h:body>
+    </h:body>
 </html>

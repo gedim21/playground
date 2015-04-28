@@ -5,20 +5,27 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
     version="2.0" >
 
-  <navigation-rule>
-    <description>From any view</description>
-    <from-view-id>*</from-view-id>
+    <navigation-rule>
+        <description>From any view</description>
+        <from-view-id>*</from-view-id>
 
-    <navigation-case>
-      <from-outcome>index</from-outcome>
-      <to-view-id>/index.xhtml</to-view-id>
-    </navigation-case>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
 
-    <navigation-case>
-      <from-outcome>help</from-outcome>
-      <to-view-id>/help.xhtml</to-view-id>
-    </navigation-case>
+        <navigation-case>
+            <from-outcome>posts</from-outcome>
+            <to-view-id>/post/posts.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+    
+        <navigation-case>
+            <from-outcome>post</from-outcome>
+            <to-view-id>/post/post.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
 
-  </navigation-rule>
+    </navigation-rule>
 
 </faces-config>

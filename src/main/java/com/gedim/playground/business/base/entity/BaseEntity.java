@@ -9,7 +9,6 @@ import java.io.Serializable;
 /**
  * Entity implementation class for Entity: BaseEntity
  */
-
 @MappedSuperclass
 public class BaseEntity implements Serializable {
 
@@ -23,11 +22,11 @@ public class BaseEntity implements Serializable {
         super();
     }
 
-    public final Long getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public final void setId(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
