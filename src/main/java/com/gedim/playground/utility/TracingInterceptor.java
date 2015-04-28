@@ -8,20 +8,20 @@ import javax.interceptor.InvocationContext;
 
 public class TracingInterceptor {
 
-    private static final Logger logger = LoggerFactory
-            .getLogger(TracingInterceptor.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TracingInterceptor.class);
 
     @AroundInvoke
     public Object logCall(InvocationContext context) throws Exception {
         long start = System.currentTimeMillis();
         try {
-            logger.debug("Invoking method: {}", context.getMethod());
+            LOGGER.debug("Invoking method: {}", context.getMethod());
             return context.proceed();
         } catch (Exception e) {
             throw e;
         } finally {
-            logger.debug("Returning from method: {} after {} ms",
-                    context.getMethod(), (System.currentTimeMillis() - start));
+            LOGGER.debug("Returning from method: {} after {} ms",
+                    context.getMethod(),
+                    System.currentTimeMillis() - start);
         }
     }
 }

@@ -2,50 +2,60 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
 
-  <display-name>playground</display-name>
+    <display-name>playground</display-name>
 
-  <welcome-file-list>
-    <welcome-file>index.jsf</welcome-file>
-  </welcome-file-list>
+    <welcome-file-list>
+        <welcome-file>index.jsf</welcome-file>
+    </welcome-file-list>
 
-  <!-- JSF Parameters -->
-  <context-param>
-    <param-name>javax.faces.PROJECT_STAGE</param-name>
-    <param-value>Development</param-value>
-  </context-param>
-  <context-param>
-    <description></description>
-    <param-name>com.sun.faces.numberOfViewsInSession</param-name>
-    <param-value>3</param-value>
-  </context-param>
-  <context-param>
-    <description></description>
-    <param-name>com.sun.faces.numberOfLogicalViews</param-name>
-    <param-value>15</param-value>
-  </context-param>
-  <context-param>
-    <description></description>
-    <param-name>com.sun.faces.enableMissingResourceLibraryDetection</param-name>
-    <param-value>true</param-value>
-  </context-param>
+    <!-- JSF Parameters -->
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <context-param>
+        <description></description>
+        <param-name>com.sun.faces.numberOfViewsInSession</param-name>
+        <param-value>3</param-value>
+    </context-param>
+    <context-param>
+        <description></description>
+        <param-name>com.sun.faces.numberOfLogicalViews</param-name>
+        <param-value>15</param-value>
+    </context-param>
+    <context-param>
+        <description></description>
+        <param-name>com.sun.faces.enableMissingResourceLibraryDetection</param-name>
+        <param-value>true</param-value>
+    </context-param>
 
-  <servlet>
-    <servlet-name>Faces Servlet</servlet-name>
-    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-    <async-supported>true</async-supported>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Faces Servlet</servlet-name>
-    <url-pattern>*.jsf</url-pattern>
-  </servlet-mapping>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.jsf</url-pattern>
+    </servlet-mapping>
 
-  <session-config>
-    <!-- One hour session timeout -->
-    <session-timeout>60</session-timeout>
-  </session-config>
+    <!-- Common JAX-RS Servlet Definition -->
+    <servlet>
+        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+        <url-pattern>/rest-api/*</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <!-- One hour session timeout -->
+        <session-timeout>60</session-timeout>
+    </session-config>
 
-  <error-page>
-    <exception-type>javax.faces.application.ViewExpiredException</exception-type>
-    <location>/index.jsf</location>
-  </error-page>
+    <error-page>
+        <exception-type>javax.faces.application.ViewExpiredException</exception-type>
+        <location>/index.jsf</location>
+    </error-page>
 </web-app>

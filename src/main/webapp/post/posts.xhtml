@@ -1,0 +1,40 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:pg="http://java.sun.com/jsf/composite/playground"
+                template="/WEB-INF/templates/layout.xhtml">
+    <ui:define name="content">
+
+        <f:metadata>
+            <f:viewAction action="#{postBean.loadPosts}" />
+        </f:metadata>
+
+        <div class="container">
+            <h:form>
+                <table class="table table-striped">
+                    <thead>
+                        <td>#</td>
+                        <td>Title</td>
+                        <td>Content</td>
+                        <td>Author</td>
+                        <td>Image</td>
+                    </thead>
+                    <tbody>
+                        <ui:repeat value="#{postBean.posts}" var="post">
+                            <tr>
+                                <td>#{post.id}</td>
+                                <td><a href="/post/post.jsf?postId=#{post.id}">#{post.title}</a></td>
+                                <td>#{post.content}</td>
+                                <td>#{post.author.name}</td>
+                                <td><pg:gravatar email="#{post.author.email}" /></td>
+                            </tr>
+                        </ui:repeat>
+                    </tbody>
+                </table>
+            </h:form>
+
+        </div>
+
+    </ui:define>
+</ui:composition>
