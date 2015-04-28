@@ -20,8 +20,8 @@ public class TracingInterceptor {
             throw e;
         } finally {
             LOGGER.debug("Returning from method: {} after {} ms",
-                    context.getMethod(),
-                    System.currentTimeMillis() - start);
+                         context.getMethod(),
+                         System.currentTimeMillis() - start);
         }
     }
 }

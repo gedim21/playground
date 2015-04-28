@@ -1,4 +1,4 @@
-package com.gedim.playground.business.timer;
+package com.gedim.playground.business.util;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
