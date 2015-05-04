@@ -1,4 +1,4 @@
-package com.gedim.playground.util.presentation;
+package com.gedim.playground.presentation.util;
 
 import java.io.Serializable;
 import java.util.Date;
