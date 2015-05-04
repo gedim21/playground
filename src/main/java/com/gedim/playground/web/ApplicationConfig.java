@@ -3,7 +3,7 @@ package com.gedim.playground.web;
 import java.util.Set;
 import javax.ws.rs.core.Application;
 
-@javax.ws.rs.ApplicationPath("webresources")
+@javax.ws.rs.ApplicationPath("rest")
 public class ApplicationConfig extends Application {
 
     @Override
@@ -14,7 +14,7 @@ public class ApplicationConfig extends Application {
     }
 
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(com.gedim.playground.business.timer.TimeService.class);
+        resources.add(com.gedim.playground.business.util.TimeService.class);
         resources.add(com.gedim.playground.presentation.post.PostBean.class);
     }
 

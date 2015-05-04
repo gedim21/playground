@@ -11,6 +11,6 @@ It uses:
 Playground is build with Maven and can be deployed on embedding Glassfish for convenience.
 
 ## How to run
-Execute `mvn embedded-glassfish:run` and then point your browser to `localhost:8888`.
+Execute `mvn package embedded-glassfish:run` and then point your browser to `localhost:8888`.
 
 >The default port number 8888 can be changed in the pom.xml file.
