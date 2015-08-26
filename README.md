@@ -5,8 +5,8 @@ It uses:
 * JSF 2.2
 * EJB 3.2
 * JPA 2.1
-* Hibernate 4.3.9.Final
-* Ehcache 2.4.3
+* Hibernate 5.0
+* Ehcache 2.10
 
 Playground is build with Maven and can be deployed on embedding Glassfish for convenience.
 
